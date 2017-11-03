@@ -246,3 +246,12 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
 -include vendor/xiaomi/land/BoardConfigVendor.mk
+
+#Omni Stuff
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_USES_QCOM_BSP := true
+TARGET_QCOM_AUDIO_VARIANT := caf-msm8937
+TARGET_QCOM_MEDIA_VARIANT := caf-msm8937
+TARGET_QCOM_DISPLAY_VARIANT := caf-msm8937
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+
