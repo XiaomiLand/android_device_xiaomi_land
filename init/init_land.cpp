@@ -152,7 +152,7 @@ void read_ramconfig()
 
 void variant_properties()
 {
-    if (property_get("ro.cm.device") != "land")
+    if (property_get("ro.omni.device") != "land")
         return;
 
     import_kernel_cmdline1(0, import_cmdline);
@@ -178,6 +178,12 @@ void variant_properties()
     } else if (board_id == "S88537EC1") {
         property_set("ro.build.display.wtid", "SW_S88537EC1_V079_M20_MP_XM");
         property_set("mm.enable.qcom_parser", "196495");
+    }
+
+    if (board_id == "S88537AB1"){
+        property_set("ro.product.model", "Redmi 3X");
+    } else {
+        property_set("ro.product.model", "Redmi 3S");
     }
 
 }
